@@ -33,6 +33,32 @@ class Solution {
 public:
     double myPow(double x, int n) {
         double ans = pow(x,n);
+     /*if(x<-100.0 && x>100.0)
+        {
+            return 0;
+        }
+        else if(n<-214783648 || n>214783647)
+        {
+            return 1;
+        }
+        
+        double ans=1;
+        if(n<0)
+        {
+            x = 1/x;
+        }
+        int power = abs(n);
+        while(power>0)
+        {
+            ans = ans*x;
+            power--;
+        }
+        if(ans<pow(-10,4) && ans>pow(10,4))
+        {
+            ans = 0;
+        }
+*/     
+     // by uisng above commented logic we can clear 301/304  test cases.
         return ans;
         
     }
