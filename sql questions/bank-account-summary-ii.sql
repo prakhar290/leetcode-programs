@@ -75,5 +75,4 @@ Charlie's balance is (6000 + 6000 - 4000) = 8000.
 
 //solution//
 
-SELECT a.NAME, b.BALANCE FROM Users a JOIN
-(SELECT account, SUM(amount) AS balance FROM Transactions GROUP BY account HAVING SUM(amount) > 10000) b ON a.account = b.account;
+select name, b.balance from users a left join (select account, sum(amount) as balance from transactions group by account) b on b.account = a.account where balance>10000;
